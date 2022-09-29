@@ -41,7 +41,7 @@ async function setupViewer(){
 
     viewer.renderer.refreshPipeline()
 
-    await manager.addFromPath("./assets/drill3.glb")
+    await manager.addFromPath("./assets/moto2.glb")
 
     viewer.getPlugin(TonemapPlugin)!.config!.clipBackground = true // in case its set to false in the glb
 
@@ -56,7 +56,7 @@ async function setupViewer(){
         // FIRST SECTION
 
         tl
-        .to(position, {x: 1.56, y: -2.26, z: -3.85,
+        .to(position, {x: 3, y: 0, z: 6,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -64,14 +64,14 @@ async function setupViewer(){
                 immediateRender: false
         }, onUpdate})
 
-        .to(".section--one--container", { xPercent:'-150' , opacity:0,
+        .to(".section--one--container", { xPercent:'-150', opacity:0,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
                 end: "top 80%", scrub: 1,
                 immediateRender: false
         }})
-        .to(target, {x: -1.37, y: 1.99 , z: -0.37,
+        .to(target, {x: 1, y: 0, z: 0,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -81,7 +81,7 @@ async function setupViewer(){
 
         // LAST SECTION
 
-        .to(position, {x: -3.4, y: 9.6, z: 1.71,
+        .to(position, {x: 4, y: -.5 , z: -6,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
@@ -89,7 +89,7 @@ async function setupViewer(){
                 immediateRender: false
         }, onUpdate})
 
-        .to(target, {x: -1.5, y: 2.13 , z: -0.4,
+        .to(target, {x: 1, y: 0 , z: 0,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
